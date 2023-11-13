@@ -1,3 +1,6 @@
+zmiana hasła po zalogowaniu się w Query Editor:
+alter user nazwaUżytkownika with password 'nowe hasło'
+
 CREATE TABLE employee
         (
         employee_id serial not null,

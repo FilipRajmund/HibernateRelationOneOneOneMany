@@ -1,7 +1,7 @@
 package pl.FilipRajmund.onetomany;
 
 import org.hibernate.Session;
-import pl.FilipRajmund.HibernateUtil;
+//import pl.FilipRajmund.HibernateUtil;
 
 import java.util.List;
 import java.util.Objects;
