@@ -1,6 +1,32 @@
 zmiana hasła po zalogowaniu się w Query Editor:
 alter user nazwaUżytkownika with password 'nowe hasło'
 
+CREATE TABLE owner
+        (
+        owner_id serial not null,
+        name varchar(32) not null,
+		surname varchar(32) not null,
+        phone varchar(32) not null,
+	    email varchar(32) not null,
+     	primary key(owner_id)
+	);
+
+//realizujey relacje one o many - czyli zwierzatko moze wskazywac tylko na jednego włacsciciela
+//kilka zwierzatek moze miec jednego właciciela
+//owner nie ma zadnej informacji o zwerzatku
+CREATE TABLE pet
+          (
+            pet_id serial not null,
+            name varchar(32) not null,
+    		breed varchar(32) not null,
+            owner_id INT Not null,
+    	   	primary key(pet_id),
+    			CONSTRAINT fk_pet_owner
+    				FOREIGN KEY (owner_id)
+    					REFERENCES owner (owner_id)
+    	);
+
+
 CREATE TABLE employee
         (
         employee_id serial not null,
@@ -42,4 +68,5 @@ czyli kilku klientów nie może mieć tego samego adresu
 UNIQUE (address_id),
 jeden klient moze się odnosic do tylko do jednego emaila:
 UNIQUE (email)
+poprzez unigue realizujemy relacje one to one w bazach danych
 

@@ -7,6 +7,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Environment;
+import pl.FilipRajmund.onetomany.Owner;
+import pl.FilipRajmund.onetomany.Pet;
 import pl.FilipRajmund.onetooneJednokierunkowa.Address;
 import pl.FilipRajmund.onetooneJednokierunkowa.Customer;
 
@@ -39,6 +41,8 @@ public class HibernateUtil {
                     .addAnnotatedClass(Employee.class)
                     .addAnnotatedClass(Customer.class)
                     .addAnnotatedClass(Address.class)
+                    .addAnnotatedClass(Pet.class)
+                    .addAnnotatedClass(Owner.class)
                     .getMetadataBuilder()
                     .build();
             return  metadata.getSessionFactoryBuilder().build();
