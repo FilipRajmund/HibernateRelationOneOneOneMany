@@ -1,4 +1,4 @@
-package pl.FilipRajmund.onetoone;
+package pl.FilipRajmund.ontooneDwukierunkowa;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -39,8 +39,8 @@ public class Customer {
     //kilku klientów nie może mieć tego samego adresu
     //relacja jest jednokierunkowa to adres nie ma zielonego pojecia o kliencie
 
-    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
-  //  @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+ //   @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "address_id", unique = true)
     private Address address;
 }

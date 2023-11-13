@@ -7,8 +7,8 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Environment;
-import pl.FilipRajmund.onetoone.Address;
-import pl.FilipRajmund.onetoone.Customer;
+import pl.FilipRajmund.onetooneJednokierunkowa.Address;
+import pl.FilipRajmund.onetooneJednokierunkowa.Customer;
 
 import java.util.Map;
 

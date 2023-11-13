@@ -1,4 +1,4 @@
-package pl.FilipRajmund.onetoone;
+package pl.FilipRajmund.onetooneJednokierunkowa;
 
 public class ExampleData {
 

@@ -1,9 +1,10 @@
-package pl.FilipRajmund.onetomany;
+package pl.FilipRajmund.ontooneDwukierunkowa;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 @Data
+//wykluczenie żeby nie wpadło w petli w javie
 @ToString(exclude = "customer")
 @Entity
 @Builder
@@ -33,4 +34,6 @@ public class Address {
     private String address;
     @OneToOne(fetch = FetchType.EAGER, mappedBy = "address", cascade = CascadeType.ALL)
     private Customer customer;
+    //dodanie relacji dwukierunkowej
+    //mappedBy narzuca że to customer jest właścicielem relacji customer-addres
 }

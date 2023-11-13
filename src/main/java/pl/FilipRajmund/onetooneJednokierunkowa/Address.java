@@ -1,4 +1,4 @@
-package pl.FilipRajmund.onetoone;
+package pl.FilipRajmund.onetooneJednokierunkowa;
 
 import jakarta.persistence.*;
 import lombok.*;

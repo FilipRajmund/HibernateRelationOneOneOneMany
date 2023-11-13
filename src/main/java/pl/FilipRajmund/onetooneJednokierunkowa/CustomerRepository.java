@@ -1,4 +1,4 @@
-package pl.FilipRajmund.onetoone;
+package pl.FilipRajmund.onetooneJednokierunkowa;
 
 import org.hibernate.Session;
 import pl.FilipRajmund.HibernateUtil;
