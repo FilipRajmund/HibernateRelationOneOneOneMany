@@ -25,9 +25,32 @@ CREATE TABLE pet
     				FOREIGN KEY (owner_id)
     					REFERENCES owner (owner_id)
     	);
+//tabelaa do relacji many to many pomocna przy łączeniu employeeM i project
+CREATE TABLE project_assignment
+          (
+            project_assignment_id serial not null,
+            employee_id INT NOT NULL,
+    		project_id INT NOT NULL,
+    	   	primary key(project_assignment_id),
+    			CONSTRAINT fk_project_assignment_id_employee
+    				FOREIGN KEY (employee_id)
+    					REFERENCES employeeM (employee_id),
+			  CONSTRAINT fk_project_assignment_project
+    				FOREIGN KEY (project_id)
+    					REFERENCES project (project_id)
+    	);
 
+CREATE TABLE project
+        (
+        project_id serial not null,
+        name varchar(64) not null,
+		description TEXT NOT NULL,
+        deadline timeStamp with time zone not null,
+        primary key(project_id),
+		UNIQUE (name)
+        );
 
-CREATE TABLE employee
+CREATE TABLE employeeM
         (
         employee_id serial not null,
         name varchar(20) not null,
